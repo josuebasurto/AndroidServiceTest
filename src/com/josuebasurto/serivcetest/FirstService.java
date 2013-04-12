@@ -4,10 +4,9 @@ import android.app.Service;
 import android.content.Intent;
 import android.os.IBinder;
 import android.util.Log;
+import android.widget.Toast;
 
 public class FirstService extends Service {
-
-	private static final String K_TAG = "ServiceTest";
 
 	@Override
 	public IBinder onBind(Intent arg0) {
@@ -19,7 +18,8 @@ public class FirstService extends Service {
 	public void onCreate() {
 		// TODO Auto-generated method stub
 		super.onCreate();
-		Log.d(K_TAG,"Service Created");
+		Log.d(Constantes.K_TAG,"Service Created");
+		Toast.makeText(getApplicationContext(), "Servicio Creado", Toast.LENGTH_SHORT).show();
 	}
 	
 	@Override
@@ -27,13 +27,15 @@ public class FirstService extends Service {
 	public void onStart(Intent intent, int startId) {
 		// TODO Auto-generated method stub
 		super.onStart(intent, startId);
-		Log.d(K_TAG,"Service Started");
+		Log.d(Constantes.K_TAG,"Service Started");
+		Toast.makeText(getApplicationContext(), "Servicio Iniciado", Toast.LENGTH_SHORT).show();
 	}
 	
 	@Override
 	public void onDestroy() {
 		// TODO Auto-generated method stub
 		super.onDestroy();
-		Log.d(K_TAG,"Service Destroyed");
+		Log.d(Constantes.K_TAG,"Service Destroyed");
+		Toast.makeText(getApplicationContext(), "Servicio Destruido", Toast.LENGTH_SHORT).show();
 	}
 }

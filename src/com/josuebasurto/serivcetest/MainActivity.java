@@ -13,7 +13,7 @@ public class MainActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 		startService(new Intent(this, FirstService.class));
-		Toast.makeText(getApplicationContext(), "Servicio Iniciado", Toast.LENGTH_SHORT).show();
+		Toast.makeText(getApplicationContext(), "Servicio Iniciado por aplicacion", Toast.LENGTH_SHORT).show();
 	}
 
 	@Override
